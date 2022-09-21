@@ -103,52 +103,55 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
 
 /*=================================
   main styling starts here
 =================================*/
+.progressBar .wrapper{
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.progress-container,.progress-list,.controls { display: flex; }
 
+.progress-container { padding: 30px 0; }
 
+.progress-list { align-items: center; }
 
+.line { 
+  margin-top: 13px;
+  width: 78px;
+  height: 4px;
+  display: inline-block;
+  background-color: rgb(224,224,224);
+  text-indent: -9999px;
+}
 
+.circle { 
+  padding: 5px 10px;
+  border: 3px solid rgb(224,224,224);
+  border-radius: 50px;
+  background: rgb(255,255,255);
+  color: rgb(128, 125, 125);
+}
 
-
+.controls {
+    width: 17.4%;
+    justify-content: space-between;
+}
+.btn button {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 6px;
+  color: rgb(255,255,255);
+  background: rgb(52,152,219);
+  font-size: 14px;
+  text-transform: capitalize;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
