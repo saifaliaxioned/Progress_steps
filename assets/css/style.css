@@ -130,6 +130,7 @@ li {
   display: inline-block;
   background-color: rgb(224,224,224);
   text-indent: -9999px;
+  transition: all 1s ease;
 }
 
 .progress-list-active .line::before {
@@ -151,18 +152,27 @@ li {
   
 }
 
-.remove-animation {
-  animation: remove-anim 1s;
+.remove-animation .line::before {
+  content: '';
+  width: 0;
+  float: left;
+  background-color: rgb(52,152,219);
+  /* transition: all 1s ease; */
+  animation: removeanim 1s;
 }
 
-@keyframes remove-anim {
+/* .remove-animation .line::before {
+  
+} */
+
+@keyframes removeanim {
   0%{
     width: 78px;
   }
   100%{
     width: 0;
   }
-}
+} 
 
 .circle { 
   padding: 5px 10px;
@@ -178,11 +188,25 @@ li {
 }
 
 @keyframes show-circle {
-  0%{
-    opacity: 0;
+   0%{
+    border-color: rgb(224,224,224);
   }
   100%{
-    opacity: 100%;
+    border-color: rgb(52,152,219); 
+  }
+}
+
+.remove-animation .circle {
+  border-color: rgb(224,224,224);
+  animation: hideCircle 0.2s;
+}
+
+@keyframes hideCircle {
+  0%{
+    border-color: rgb(52,152,219); 
+  }
+  100%{
+    border-color: rgb(224,224,224);
   }
 }
 
