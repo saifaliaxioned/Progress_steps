@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -109,17 +110,26 @@ li {
 =================================*/
 .progressBar .wrapper {
   height: 100vh; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.progress-container,.progress-list,.controls { display: flex; }
+.progress-container,.progress-list,.controls { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .progress-container { padding-bottom: 35px; }
 
-.progress-list { align-items: center; }
+.progress-list { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .progress-line { position: relative; }
 
@@ -130,6 +140,8 @@ li {
   display: inline-block;
   background-color: rgb(224,224,224);
   text-indent: -9999px;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -139,7 +151,18 @@ li {
   height: 4px;
   background-color: rgb(52,152,219);
   float: left;
-  animation: grow 1s;
+  -webkit-animation: grow 1s;
+          animation: grow 1s;
+}
+
+@-webkit-keyframes grow {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 78px;
+  }
+  
 }
 
 @keyframes grow {
@@ -157,13 +180,22 @@ li {
   width: 0;
   float: left;
   background-color: rgb(52,152,219);
-  /* transition: all 1s ease; */
-  animation: removeanim 1s;
+  -webkit-animation: removeanim 1s;
+          animation: removeanim 1s;
 }
 
 /* .remove-animation .line::before {
   
 } */
+
+@-webkit-keyframes removeanim {
+  0%{
+    width: 78px;
+  }
+  100%{
+    width: 0;
+  }
+}
 
 @keyframes removeanim {
   0%{
@@ -184,7 +216,17 @@ li {
 
 .progress-list-active .circle { 
   border-color: rgb(52,152,219); 
-  animation: show-circle 1s;
+  -webkit-animation: show-circle 1s; 
+          animation: show-circle 1s;
+}
+
+@-webkit-keyframes show-circle {
+   0%{
+    border-color: rgb(224,224,224);
+  }
+  100%{
+    border-color: rgb(52,152,219); 
+  }
 }
 
 @keyframes show-circle {
@@ -198,7 +240,17 @@ li {
 
 .remove-animation .circle {
   border-color: rgb(224,224,224);
-  animation: hideCircle 0.2s;
+  -webkit-animation: hideCircle 0.2s;
+          animation: hideCircle 0.2s;
+}
+
+@-webkit-keyframes hideCircle {
+  0%{
+    border-color: rgb(52,152,219); 
+  }
+  100%{
+    border-color: rgb(224,224,224);
+  }
 }
 
 @keyframes hideCircle {
@@ -212,7 +264,9 @@ li {
 
 .controls {
   width: 17.4%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .btn {
   padding: 9px 32px;
@@ -224,7 +278,7 @@ li {
   text-transform: capitalize;
 }
 
-.btn:active { transform: scale(0.96); }
+.btn:active { -webkit-transform: scale(0.96); -ms-transform: scale(0.96); transform: scale(0.96); }
 
 .btn:disabled { 
   background: rgb(224,224,224);
