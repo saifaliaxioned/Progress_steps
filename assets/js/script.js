@@ -25,7 +25,6 @@ function update() {
       li.classList.add('progress-list-active');
       li.classList.remove('remove-animation');
     } else {
-      // li.classList.remove('progress-list-active');
       li.classList.add('remove-animation');
     }
   });
