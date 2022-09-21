@@ -23,8 +23,10 @@ function update() {
   progress.forEach(function (li , index) {
     if (index < counter) {
       li.classList.add('progress-list-active');
+      li.classList.remove('remove-animation');
     } else {
-      li.classList.remove('progress-list-active');
+      // li.classList.remove('progress-list-active');
+      li.classList.add('remove-animation');
     }
   });
 
