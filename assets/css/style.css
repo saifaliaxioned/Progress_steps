@@ -107,7 +107,7 @@ li {
 /*=================================
   main styling starts here
 =================================*/
-.progressBar .wrapper{
+.progressBar .wrapper {
   height: 100vh; 
   display: flex;
   justify-content: center;
@@ -150,6 +150,20 @@ li {
   }
   
 }
+
+.remove-animation {
+  animation: remove-anim 1s;
+}
+
+@keyframes remove-anim {
+  0%{
+    width: 78px;
+  }
+  100%{
+    width: 0;
+  }
+}
+
 .circle { 
   padding: 5px 10px;
   border: 3px solid rgb(224,224,224);
