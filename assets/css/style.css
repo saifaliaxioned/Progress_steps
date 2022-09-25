@@ -220,6 +220,11 @@ li {
           animation: show-circle 1s;
 }
 
+.remove-circle .circle{
+  border-color: rgb(224,224,224);
+  transition: all 0.8s ease;
+}
+
 @-webkit-keyframes show-circle {
    0%{
     border-color: rgb(224,224,224);
@@ -235,30 +240,6 @@ li {
   }
   100%{
     border-color: rgb(52,152,219); 
-  }
-}
-
-.remove-animation .circle {
-  border-color: rgb(224,224,224);
-  -webkit-animation: hideCircle 0.2s;
-          animation: hideCircle 0.2s;
-}
-
-@-webkit-keyframes hideCircle {
-  0%{
-    border-color: rgb(52,152,219); 
-  }
-  100%{
-    border-color: rgb(224,224,224);
-  }
-}
-
-@keyframes hideCircle {
-  0%{
-    border-color: rgb(52,152,219); 
-  }
-  100%{
-    border-color: rgb(224,224,224);
   }
 }
 
