@@ -24,8 +24,10 @@ function update() {
     if (index < counter) {
       li.classList.add('progress-list-active');
       li.classList.remove('remove-animation');
+      li.classList.remove('remove-circle');
     } else {
       li.classList.add('remove-animation');
+      li.classList.add('remove-circle');
     }
   });
 
